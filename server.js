@@ -5,7 +5,7 @@ const flightRouter = require('./router/flight.router');
 const bookingRouter = require('./router/booking.router');
 
 const app = express()
-
+app.use(express.json())
 app.use('/api', userRouter);
 app.use("/api",flightRouter);
 app.use('/api' , bookingRouter)
